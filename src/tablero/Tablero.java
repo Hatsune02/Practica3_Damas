@@ -28,11 +28,11 @@ public class Tablero{
             System.out.print("\n\t");
             for (int j = 0; j < tablero.length; j++) {
                 if((i + j) % 2 == 0){
-                    System.out.print(Colores.ANSI_BLACK_BACKGROUND + "  ");
+                    System.out.print(Colores.ANSI_WHITE_BACKGROUND + "  ");
                     System.out.print("   " + Colores.ANSI_RESET);
                 }
                 else{
-                    System.out.print(Colores.ANSI_WHITE_BACKGROUND + "  ");
+                    System.out.print(Colores.ANSI_BLACK_BACKGROUND + "  ");
                     System.out.print("   " + Colores.ANSI_RESET);
                 }
                 
@@ -40,11 +40,11 @@ public class Tablero{
             System.out.print("\n\t");
             for (int j = 0; j < tablero.length; j++) {
                 if((i + j) % 2 == 0){
-                    System.out.print(Colores.ANSI_BLACK_BACKGROUND + "  ");
+                    System.out.print(Colores.ANSI_WHITE_BACKGROUND + "  ");
                     System.out.print(tablero[i][j] + "  " + Colores.ANSI_RESET);
                 }
                 else{
-                    System.out.print(Colores.ANSI_WHITE_BACKGROUND + "  ");
+                    System.out.print(Colores.ANSI_BLACK_BACKGROUND + "  ");
                     System.out.print(tablero[i][j] + "  " + Colores.ANSI_RESET);
                 }
                 
@@ -52,11 +52,11 @@ public class Tablero{
             System.out.print("\n\t");
             for (int j = 0; j < tablero.length; j++) {
                 if((i + j) % 2 == 0){
-                    System.out.print(Colores.ANSI_BLACK_BACKGROUND + "  ");
+                    System.out.print(Colores.ANSI_WHITE_BACKGROUND + "  ");
                     System.out.print("   " + Colores.ANSI_RESET);
                 }
                 else{
-                    System.out.print(Colores.ANSI_WHITE_BACKGROUND + "  ");
+                    System.out.print(Colores.ANSI_BLACK_BACKGROUND + "  ");
                     System.out.print("   " + Colores.ANSI_RESET);
                 }
                 
@@ -95,11 +95,11 @@ public class Tablero{
             System.out.print("\n\t");
             for (int j = 0; j < tablero.length; j++) {
                 if((i + j) % 2 == 0){
-                    System.out.print(Colores.ANSI_BLACK_BACKGROUND + "  ");
+                    System.out.print(Colores.ANSI_WHITE_BACKGROUND + "  ");
                     System.out.print("   " + Colores.ANSI_RESET);
                 }
                 else{
-                    System.out.print(Colores.ANSI_WHITE_BACKGROUND + "  ");
+                    System.out.print(Colores.ANSI_BLACK_BACKGROUND + "  ");
                     System.out.print("   " + Colores.ANSI_RESET);
                 }
                 
@@ -114,19 +114,19 @@ public class Tablero{
         
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
-                if(i == 0 || i == 1){
+                if(i >= 0 && i <= 2){
                     if((i + j) % 2 == 0){
-                        tablero[i][j] = Colores.ANSI_BLUE + "O";
+                        tablero[i][j] = Colores.ANSI_BLUE + "o";
                     }
                     else{
                         tablero[i][j] = SIMBOLO_VACIO;
                     }
                 }
 
-                else if(i == 6 || i == 7){
+                else if(i >= 5 && i <= 7){
                     
                     if((i + j) % 2 == 0){
-                        tablero[i][j] = Colores.ANSI_RED + "O";
+                        tablero[i][j] = Colores.ANSI_RED + "o";
                     }
                     else{
                         tablero[i][j] = SIMBOLO_VACIO;

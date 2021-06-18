@@ -5,11 +5,6 @@ import src.tablero.Tablero;
 
 public class Juego {
 
-    public static void main(String[] args) {
-        Tablero tablero = new Tablero();
-        tablero.dibujarTablero("JUAN","MAGNUS");
-    }
-
     private Tablero tablero;
     private Jugador jugador1;
     private Jugador jugador2;

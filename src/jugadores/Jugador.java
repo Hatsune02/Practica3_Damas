@@ -1,6 +1,7 @@
 package src.jugadores;
 
 public class Jugador {
+    private String ficha;
     private String nombre;
     private int[][] fichas;
 
