@@ -1,13 +1,18 @@
 package src.jugadores;
 
 public class Jugador {
-    private String ficha;
     private String nombre;
-    private int[][] fichas;
+    public int cantidadWins = 0;
+    public int cantidadLoses = 0;
+    public boolean juegaConNegras;
 
     public Jugador(String nombre){
         this.nombre = nombre;
-        llenarFichas();
+
+    }
+
+    public void setJuegaConNegras(boolean juegaConNegras) {
+        this.juegaConNegras = juegaConNegras;
     }
 
     public String getNombre() {
@@ -18,20 +23,8 @@ public class Jugador {
         this.nombre = nombre;
     }
 
-    public int[][] getFichas() {
-        return fichas;
+    public int getCantidadWins() {
+        return cantidadWins;
     }
 
-    public void setFichas(int[][] fichas) {
-        this.fichas = fichas;
-    }
-
-    private void llenarFichas() {
-        this.fichas = new int[4][4];
-        for (int i = 0; i < this.fichas.length; i++) {
-            for (int j = 0; j < fichas.length; j++) {
-                fichas[i][j] = 0;
-            }
-        }
-    }
 }
