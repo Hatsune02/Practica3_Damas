@@ -25,11 +25,10 @@ public class IngresoDatos {
         while(n.equals("")){
             System.out.println(titulo);
             n = leer.nextLine();
-            if(!n.matches("[0-9]{"+rango+"}")){
+            if(!n.matches("[1-"+rango+"]{1}")){
                 n = "";
             }
         }
-        
         return Integer.parseInt(n);
     }
 
