@@ -143,7 +143,7 @@ public class Tablero{
                                 }
                             }
 
-                            else if(y1 >= 2 || y1 <= tablero.length - 2){
+                            else if(y1 >= 2 || y1 <= 5){
                                 if (!tablero[x2][y2].ocupadaPorFicha()){
                                     if(tablero[x2][y2] == tablero[x1 + 1][y1 + 1] || tablero[x2][y2] == tablero[x1 + 1][y1 - 1]){
 
@@ -194,7 +194,7 @@ public class Tablero{
                                 }
                             }
 
-                            else if(y1 == tablero.length){
+                            else if(y1 == 7){
 
                                 if (!tablero[x2][y2].ocupadaPorFicha()){
                                     if(tablero[x2][y2] == tablero[x1 + 1][y1 - 1]){
@@ -232,7 +232,7 @@ public class Tablero{
                                 }
                             }
 
-                            else if(y1 == (tablero.length - 1)){
+                            else if(y1 == 6){
 
                                 if (!tablero[x2][y2].ocupadaPorFicha()){
                                     if(tablero[x2][y2] == tablero[x1 + 1][y1 + 1] || tablero[x2][y2] == tablero[x1 + 1][y1 - 1]){
@@ -436,7 +436,7 @@ public class Tablero{
                                 }
                             }
 
-                            else if(y1 >= 2 && y1<= tablero.length - 2){
+                            else if(y1 >= 2 && y1<= 5){
                                 if (!tablero[x2][y2].ocupadaPorFicha()){
                                     if(tablero[x2][y2] == tablero[x1 - 1][y1 + 1] || tablero[x2][y2] == tablero[x1 - 1][y1 - 1]){
 
@@ -487,7 +487,7 @@ public class Tablero{
                                 }
                             }
 
-                            else if(y1 == tablero.length){
+                            else if(y1 == 7){
 
                                 if (!tablero[x2][y2].ocupadaPorFicha()){
                                     if(tablero[x2][y2] == tablero[x1 - 1][y1 - 1]){
@@ -525,7 +525,7 @@ public class Tablero{
                                 }
                             }
 
-                            else if(y1 == (tablero.length - 1)){
+                            else if(y1 == 6){
 
                                 if (!tablero[x2][y2].ocupadaPorFicha()){
                                     if(tablero[x2][y2] == tablero[x1 - 1][y1 + 1] || tablero[x2][y2] == tablero[x1 - 1][y1 - 1]){

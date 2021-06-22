@@ -186,7 +186,7 @@ public class Juego {
         int x2 = IngresoDatos.getIntRango("Ingresa la posicion en x hacia donde quiere mover la ficha",8);
         int y2 = IngresoDatos.getIntRango("Ingresa la posicion en y hacia donde quiere mover la ficha",8);
 
-        tablero.moverFicha(y1 - 1,x1 - 1,y2 -1 ,x2 -1 ,turnoNegras);
+        tablero.moverFicha((y1 - 1),(x1 - 1),(y2-1) ,(x2 -1) ,turnoNegras);
 
     }
 
