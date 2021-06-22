@@ -31,6 +31,7 @@ public class Juego {
                 "────────────────────────────────────────────────────────────────────────────────────\n\n");
 
         int opcion;
+
         do{
             System.out.println("MENU___________________________");
             System.out.println("\n1) Jugar.");
@@ -51,6 +52,7 @@ public class Juego {
                 ingresarJugadores();
             }
             else if(opcion == 3){
+
                 ordenarJugadores();
                 mostrarJugador();
             }
@@ -61,6 +63,7 @@ public class Juego {
 
     public void inicio(){
 
+        
     }
     public void jugar(){
         boolean turnoNegras = false;
@@ -69,6 +72,7 @@ public class Juego {
         mostrarJugador();
         boolean ganadorBlanco = false;
         boolean ganadorNegro = false;
+        boolean ganador= false;
 
         do{
             jugador1 = IngresoDatos.getInt("\nEscoger al primer jugador") ;
@@ -141,18 +145,21 @@ public class Juego {
 
             pedirMovimiento(turnoNegras);
             tablero.dibujarTablero(jugadores[jugador1].getNombre(), jugadores[jugador2].getNombre());
+            
             if(tablero.fichasBlancasComidas == 12){
                 ganadorNegro = true;
+                ganador = true;
             }
             else if(tablero.fichasNegrasComidas == 12){
                 ganadorBlanco = true;
+                ganador = true;
             }
             turnoNegras = !turnoNegras;
 
-        } while(!ganadorNegro || !ganadorBlanco);
+        } while(!ganador);
 
 
-        if(tablero.fichasBlancasComidas < 12){
+        if(ganadorBlanco){
             if(!jugadores[jugador1].juegaConNegras){
                 System.out.println("\nHA GANADO EL JUGADOR " + jugadores[jugador1].getNombre() + "\n\n");
                 jugadores[jugador1].cantidadWins++;
@@ -164,7 +171,7 @@ public class Juego {
                 System.out.println("\nHA GANADO EL JUGADOR " + jugadores[jugador2].getNombre() + "\n\n");
             }
         }
-        else if(tablero.fichasNegrasComidas < 12){
+        else if(ganadorNegro){
             if(jugadores[jugador1].juegaConNegras){
                 jugadores[jugador1].cantidadWins++;
                 jugadores[jugador2].cantidadLoses++;
@@ -187,7 +194,7 @@ public class Juego {
         int y2 = IngresoDatos.getIntRango("Ingresa la posicion en y hacia donde quiere mover la ficha",8);
 
         tablero.moverFicha((y1 - 1),(x1 - 1),(y2-1) ,(x2 -1) ,turnoNegras);
-
+        
     }
 
     public void ingresarJugadores(){
@@ -225,7 +232,7 @@ public class Juego {
         if(cantidadJugadores > 0){
             for (int i = 0; i < cantidadJugadores - 1; i++) {
                 for (int j = 0; j < cantidadJugadores - 1; j++) {
-                    if(jugadores[j].getCantidadWins() > jugadores[j+1].getCantidadWins()){
+                    if(jugadores[j].getCantidadWins() < jugadores[j+1].getCantidadWins()){
                         Jugador aux = jugadores[j];
                         jugadores[j] = jugadores[j+1];
                         jugadores[j+1] = aux;

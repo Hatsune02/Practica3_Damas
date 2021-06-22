@@ -143,7 +143,7 @@ public class Tablero{
                                 }
                             }
 
-                            else if(y1 >= 2 || y1 <= 5){
+                            else if(y1 >= 2 && y1 <= 5){
                                 if (!tablero[x2][y2].ocupadaPorFicha()){
                                     if(tablero[x2][y2] == tablero[x1 + 1][y1 + 1] || tablero[x2][y2] == tablero[x1 + 1][y1 - 1]){
 
@@ -197,10 +197,11 @@ public class Tablero{
                             else if(y1 == 7){
 
                                 if (!tablero[x2][y2].ocupadaPorFicha()){
+                                    System.out.println("TODO bien");
                                     if(tablero[x2][y2] == tablero[x1 + 1][y1 - 1]){
 
                                         tablero[x2][y2].setFicha(tablero[x1][y1].getFicha());
-                                        if(x2 == tablero.length-1){
+                                        if(x2 == 7){
                                             tablero[x2][y2].getFicha1().setEsReina(true);
                                         }
 
@@ -209,7 +210,7 @@ public class Tablero{
                                         if(tablero[x1 + 1][y1 - 1].ocupadaPorFicha()){
                                             if(tablero[x1 + 1][y1 - 1].getFicha1().getEsNegra()){
                                                 tablero[x2][y2].setFicha(tablero[x1][y1].getFicha());
-                                                if(x2 == tablero.length-1){
+                                                if(x2 == 7){
                                                     tablero[x2][y2].getFicha1().setEsReina(true);
                                                 }
                                                 tablero[x1 + 1][y1 - 1].eliminarFicha();

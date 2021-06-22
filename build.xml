@@ -14,4 +14,8 @@
        <target name="clean" description="Borra los archivos .class">
          <delete dir="build"/>
        </target>
+       
+       <target name="jar" depends="compile">
+      	  <jar destfile="jar/fichero.jar" includes="../class/**/*.class"/>
+       </target>
 </project>
